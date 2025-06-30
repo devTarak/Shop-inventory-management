@@ -19,7 +19,7 @@ class SellProduct extends BaseController
     public function index()
     {
         // Fetch all products from the database
-        $products = $this->productsModel->findAll();
+        $products = $this->productsModel->where('quantity >', 0)->findAll();
         return $this->template->admin_panel('sellproduct', [
             'title' => 'Sell Product',
             'page_title' => 'Sell Product',
