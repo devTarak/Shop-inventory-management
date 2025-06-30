@@ -4,7 +4,7 @@ $currentSegment = $uri->getSegment(2);
 ?>
 <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-        <span class="fs-4">T Inventory</span>
+        <span class="fs-4">T Shop Inventory</span>
     </a>
     <h6 class="text-uppercase mb-3">Management</h6>
     <hr>
