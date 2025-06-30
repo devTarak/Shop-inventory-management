@@ -119,4 +119,54 @@ class SellProduct extends BaseController
             ]);
         }
     }
+    public function report(){
+        return $this->template->admin_panel('sellrerport', [
+            'title' => 'Sell Report',
+            'page_title' => 'Sell Report',
+            'page_description' => 'View sales reports.',
+        ]);
+    }
+    public function getReportData()
+    {
+        $startDate = $this->request->getPost('start_date');
+        $endDate = $this->request->getPost('end_date');
+
+        // Validate date inputs
+        if (empty($startDate) || empty($endDate)) {
+            return $this->response->setJSON(['error' => 'Start date and end date are required.']);
+        }
+
+        // Fetch sales data within the date range
+        $sales = $this->saleModel->where('created_at >=', $startDate)
+            ->where('created_at <=', $endDate)
+            ->findAll();
+        foreach ($sales as &$sale) {
+            if (isset($sale['product_name'])) {
+                $sale['name'] = $sale['product_name'];
+                unset($sale['product_name']);
+            }
+            if (isset($sale['product_sku'])) {
+                $sale['sku'] = $sale['product_sku'];
+                unset($sale['product_sku']);
+            }
+            if (isset($sale['product_buying_price'])) {
+                $sale['buying_price'] = $sale['product_buying_price'];
+                unset($sale['product_buying_price']);
+            }
+            if (isset($sale['quantity'])) {
+                $sale['product_quantity'] = (int)$sale['quantity'];
+                unset($sale['quantity']);
+            }
+            if (isset($sale['selling_price'])) {
+                $sale['total_price'] = (float)$sale['selling_price'];
+                unset($sale['selling_price']);
+            }
+            if (isset($sale['created_at'])) {
+                $sale['date'] = date('Y-m-d', strtotime($sale['created_at']));
+                unset($sale['created_at']);
+            }
+        }
+
+        return $this->response->setJSON($sales);
+    }
 }

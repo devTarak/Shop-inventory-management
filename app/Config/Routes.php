@@ -15,3 +15,5 @@ $routes->get('admin/addnewproduct', 'Products::addnewproductpage');
 $routes->get('admin/sellproduct', 'SellProduct::index');
 $routes->get('admin/searchProducts', 'SellProduct::searchProducts');
 $routes->post('admin/sellproduct', 'SellProduct::sellProduct');
+$routes->get('admin/reports', 'SellProduct::report');
+$routes->post('admin/reports/searchReports', 'SellProduct::getReportData');

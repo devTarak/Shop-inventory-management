@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="<?= base_url('include/admin_asset/images/favicon.ico') ?>" type="image/x-icon">
-    <link rel="stylesheet" href="<?= base_url('include/admin_asset/css/style.css') ?>" type="text/css" media="all">
     <link rel="preload" href="<?= base_url('include/admin_asset/bootstrap/bootstrap.min.css') ?>" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="<?= base_url('include/admin_asset/css/style.css') ?>" as="style"
         onload="this.onload=null;this.rel='stylesheet'">
     <!-- Bootstrap Icons CDN -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">

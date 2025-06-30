@@ -38,7 +38,7 @@ $currentSegment = $uri->getSegment(2);
             </a>
         </li>
         <li>
-            <a href="#" class="nav-link text-white">
+            <a href="<?= base_url('admin/reports') ?>" class="nav-link text-white <?= ($currentSegment == 'reports') ? 'active' : '' ?>">
                 <img src="<?= base_url('include/admin_asset/svg/static.svg') ?>" alt="product add icon" width="20"
                     height="20" class="me-2">
                 </svg>
@@ -55,7 +55,6 @@ $currentSegment = $uri->getSegment(2);
             <strong>Admin</strong>
         </a>
         <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-            <li><a class="dropdown-item" href="#">Settings</a></li>
             <li><a class="dropdown-item" href="#">Profile</a></li>
             <li>
                 <hr class="dropdown-divider">
