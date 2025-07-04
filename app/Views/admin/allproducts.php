@@ -1,4 +1,4 @@
-<div class="container-fluid px-3">
+<div class="container-fluid px-3" style="overflow-y: auto;">
     <div class="d-flex justify-content-between align-items-center mt-4 mb-3">
         <h3 class="mb-0">All Products</h3>
         <button type="button" class="btn btn-success addProduct" data-bs-toggle="modal" data-bs-target="#addProductModal">
@@ -122,7 +122,7 @@
     $(document).on('submit', '#addProductForm', function(e) {
         e.preventDefault();
         $.ajax({
-            url: '<?= base_url('admin/addproduct') ?>',
+            url: '<?= base_url('admin/products/add') ?>',
             type: 'POST',
             data: $(this).serialize(),
             dataType: 'json',
@@ -141,7 +141,7 @@
     $(document).on('click', '.productEdit', function(){
         let productId = $(this).data('id');
         $.ajax({
-            url: '<?= base_url('admin/getproduct') ?>',
+            url: '<?= base_url('admin/products/get') ?>',
             type: 'POST',
             data: { product_id: productId },
             dataType: 'json',
@@ -165,7 +165,7 @@
         e.preventDefault();
         let productId = $('.editproductsave').data('id');
         $.ajax({
-            url: '<?= base_url('admin/editproduct') ?>',
+            url: '<?= base_url('admin/products/edit') ?>',
             type: 'POST',
             data: $(this).serialize() + '&product_id=' + productId,
             dataType: 'json',
@@ -185,7 +185,7 @@
         let productId = $(this).data('id');
         if (confirm('Are you sure you want to delete this product?')) {
             $.ajax({
-                url: '<?= base_url('admin/deleteproduct') ?>',
+                url: '<?= base_url('admin/products/delete') ?>',
                 type: 'POST',
                 data: { product_id: productId },
                 dataType: 'json',

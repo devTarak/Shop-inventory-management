@@ -29,7 +29,7 @@
         e.preventDefault();
         let proformData = $(this).serialize();
         $.ajax({
-            url: '<?= base_url('admin/addproduct') ?>',
+            url: '<?= base_url('admin/products/add') ?>',
             type: 'POST',
             data: proformData,
             dataType: 'json',

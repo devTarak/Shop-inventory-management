@@ -1,4 +1,4 @@
-<div class="container-fluid px-3">
+<div class="container-fluid px-3" style="overflow-y: auto;">
     <div class="d-flex justify-content-between align-items-center mt-4 mb-3">
         <h3 class="mb-0">Sales Report</h3>
         <form method="POST" class="row g-3 align-items-center" id="searchReportForm">
@@ -62,7 +62,7 @@
             }
 
             $.ajax({
-                url: '<?= base_url('admin/reports/searchReports') ?>',
+                url: '<?= base_url('admin/reports/search') ?>',
                 type: 'POST',
                 data: {
                     start_date: startDate,
@@ -110,7 +110,7 @@
         }
 
         $.ajax({
-            url: '<?= base_url('admin/reports/searchReports') ?>',
+            url: '<?= base_url('admin/reports/search') ?>',
             type: 'POST',
             data: {
                 start_date: startDates,

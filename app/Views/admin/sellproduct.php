@@ -1,4 +1,4 @@
-<div class="container-fluid px-3">
+<div class="container-fluid px-3" style="overflow-y: auto;">
     <div class="d-flex justify-content-between align-items-center mt-4 mb-3">
         <h3 class="mb-0">Sell Product</h3>
         <form method="get" class="row g-3 align-items-center" id="searchProductForm">
@@ -152,7 +152,7 @@
         $('#sell_product_name').val('');
         $('#sell_product_sku').val('');
         $.ajax({
-            url: '<?= base_url('admin/getproduct') ?>',
+            url: '<?= base_url('admin/products/get') ?>',
             type: 'POST',
             data: { product_id: productId },
             dataType: 'json',
@@ -174,7 +174,7 @@
     $(document).on('submit', '#sellProductForm', function (e) {
         e.preventDefault();
         $.ajax({
-            url: '<?= base_url('admin/sellproduct') ?>',
+            url: '<?= base_url('admin/sell/product') ?>',
             type: 'POST',
             data: $(this).serialize(),
             dataType: 'json',

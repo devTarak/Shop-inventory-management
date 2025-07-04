@@ -31,7 +31,7 @@ $currentSegment = $uri->getSegment(2);
             </a>
         </li>
         <li>
-            <a href="<?= base_url('admin/sellproduct') ?>" class="nav-link text-white <?= ($currentSegment == 'sellproduct') ? 'active' : '' ?>">
+            <a href="<?= base_url('admin/sell/view/iteams') ?>" class="nav-link text-white <?= ($currentSegment == "sell") ? 'active' : '' ?>">
                 <img src="<?= base_url('include/admin_asset/svg/buy.svg') ?>" alt="product add icon" width="20"
                     height="20" class="me-2">
                 Sell Product

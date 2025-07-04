@@ -6,14 +6,20 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('admin', 'Home::index');
-$routes->get('admin/products', 'Products::index');
-$routes->post('admin/getproduct', 'Products::getSingleProduct');
-$routes->post('admin/editproduct', 'Products::editProduct');
-$routes->post('admin/addproduct', 'Products::addProduct');
-$routes->post('admin/deleteproduct', 'Products::deleteProduct');
+$routes->group('admin/products', function ($routes){
+    $routes->get('/', 'Products::index');
+    $routes->post('get', 'Products::getSingleProduct');
+    $routes->post('edit', 'Products::editProduct');
+    $routes->post('add', 'Products::addProduct');
+    $routes->post('delete', 'Products::deleteProduct');
+});
+$routes->group('admin/sell', function ($routes) {
+    $routes->get('view/iteams', 'SellProduct::index');
+    $routes->post('product', 'SellProduct::sellProduct');
+});
+$routes->group('admin/reports', function ($routes) {
+    $routes->get('/', 'SellProduct::report');
+    $routes->post('search', 'SellProduct::getReportData');
+});
 $routes->get('admin/addnewproduct', 'Products::addnewproductpage');
-$routes->get('admin/sellproduct', 'SellProduct::index');
 $routes->get('admin/searchProducts', 'SellProduct::searchProducts');
-$routes->post('admin/sellproduct', 'SellProduct::sellProduct');
-$routes->get('admin/reports', 'SellProduct::report');
-$routes->post('admin/reports/searchReports', 'SellProduct::getReportData');
