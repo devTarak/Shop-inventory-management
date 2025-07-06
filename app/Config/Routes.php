@@ -30,3 +30,4 @@ $routes->get('admin/addnewproduct', 'Products::addnewproductpage', ["namespace" 
 $routes->get('admin/searchProducts', 'SellProduct::searchProducts', ["namespace" => "App\Controllers\Admin", "filter" => "auth"]);
 $routes->get('logout', 'LoginController::logout', ["namespace" => "App\Controllers", "filter" => "auth"]);
 $routes->post('login', 'LoginController::login', ["namespace" => "App\Controllers", "filter" => "deauth"]);
+$routes->get('generator/(:any)', 'GeneratorExternalController::index/$1');
