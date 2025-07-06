@@ -71,6 +71,7 @@
       <p class="mt-5 mb-3 text-muted">&copy; 2024–2025</p>
     </form>
   </main>
+  <script src="<?= base_url('include/bootstrap/bootstrap.bundle.min.js') ?>" type="text/javascript"
+    defer></script>
 </body>
-
 </html>
