@@ -11,10 +11,33 @@
     <link rel="preload" href="<?= base_url('include/admin_asset/css/style.css') ?>" as="style"
         onload="this.onload=null;this.rel='stylesheet'">
     <!-- Bootstrap Icons CDN -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <title><?= esc($page_title) ?> - <?= esc($page_description) ?></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <title>
+        <?= esc($page_title) ?> -
+        <?= esc($page_description) ?>
+    </title>
     <script src="<?= base_url('include/admin_asset/js/jquery-3.7.1.min.js') ?>"></script>
 </head>
 
 <body>
+    <?php if (session()->getFlashdata('message')): ?>
+    <div class="alert alert-info alert-dismissible fade show" role="alert">
+        <?= session()->getFlashdata('message') ?>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <?php endif; ?>
+
+    <?php if (session()->getFlashdata('error')): ?>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <?= session()->getFlashdata('error') ?>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <?php endif; ?>
+
+    <?php if (session()->getFlashdata('success')): ?>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <?= session()->getFlashdata('success') ?>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <?php endif; ?>
     <main>

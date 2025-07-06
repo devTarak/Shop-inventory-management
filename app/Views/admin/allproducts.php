@@ -185,9 +185,8 @@
         let productId = $(this).data('id');
         if (confirm('Are you sure you want to delete this product?')) {
             $.ajax({
-                url: '<?= base_url('admin/products/delete') ?>',
-                type: 'POST',
-                data: { product_id: productId },
+                url: '<?= base_url('admin/products/delete') ?>?product_id=' + productId,
+                type: 'DELETE',
                 dataType: 'json',
                 success: function(response) {
                     if (response.status === 'success') {

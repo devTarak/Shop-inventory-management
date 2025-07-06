@@ -52,14 +52,14 @@ $currentSegment = $uri->getSegment(2);
             data-bs-toggle="dropdown" aria-expanded="false">
             <img src="<?= base_url('include/admin_asset/svg/user.svg') ?>" alt="" width="32" height="32"
                 class="rounded-circle me-2">
-            <strong>Admin</strong>
+            <strong><?= $user_name ?></strong>
         </a>
         <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="<?= base_url('admin/user') ?>">Profile</a></li>
             <li>
                 <hr class="dropdown-divider">
             </li>
-            <li><a class="dropdown-item" href="#">Sign out</a></li>
+            <li><a class="dropdown-item" href="<?= base_url('logout') ?>">Sign out</a></li>
         </ul>
     </div>
 </div>
