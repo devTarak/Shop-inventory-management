@@ -1,0 +1,56 @@
+DEBUG - 2025-12-07 09:12:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-07 09:12:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-07 09:19:13 --> mysqli_sql_exception: Invalid default value for 'created_at' in C:\laragon\www\sdipos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\sdipos\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `e...', 0)
+#1 C:\laragon\www\sdipos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `e...')
+#2 C:\laragon\www\sdipos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `e...')
+#3 C:\laragon\www\sdipos\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `e...')
+#4 C:\laragon\www\sdipos\app\Database\Migrations\2025-12-07-031502_Expense.php(45): CodeIgniter\Database\Forge->createTable('expenses')
+#5 C:\laragon\www\sdipos\system\Database\MigrationRunner.php(876): App\Database\Migrations\Expense->up()
+#6 C:\laragon\www\sdipos\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\laragon\www\sdipos\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\laragon\www\sdipos\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\laragon\www\sdipos\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\laragon\www\sdipos\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#11 C:\laragon\www\sdipos\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\laragon\www\sdipos\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-12-07 09:20:00 --> mysqli_sql_exception: Invalid default value for 'created_at' in C:\laragon\www\sdipos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\sdipos\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `e...', 0)
+#1 C:\laragon\www\sdipos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `e...')
+#2 C:\laragon\www\sdipos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `e...')
+#3 C:\laragon\www\sdipos\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `e...')
+#4 C:\laragon\www\sdipos\app\Database\Migrations\2025-12-07-031502_Expense.php(46): CodeIgniter\Database\Forge->createTable('expenses')
+#5 C:\laragon\www\sdipos\system\Database\MigrationRunner.php(876): App\Database\Migrations\Expense->up()
+#6 C:\laragon\www\sdipos\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\laragon\www\sdipos\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\laragon\www\sdipos\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\laragon\www\sdipos\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\laragon\www\sdipos\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#11 C:\laragon\www\sdipos\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\laragon\www\sdipos\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-12-07 09:20:41 --> mysqli_sql_exception: Invalid default value for 'created_at' in C:\laragon\www\sdipos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\sdipos\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `e...', 0)
+#1 C:\laragon\www\sdipos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `e...')
+#2 C:\laragon\www\sdipos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `e...')
+#3 C:\laragon\www\sdipos\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `e...')
+#4 C:\laragon\www\sdipos\app\Database\Migrations\2025-12-07-031502_Expense.php(44): CodeIgniter\Database\Forge->createTable('expenses')
+#5 C:\laragon\www\sdipos\system\Database\MigrationRunner.php(876): App\Database\Migrations\Expense->up()
+#6 C:\laragon\www\sdipos\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\laragon\www\sdipos\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\laragon\www\sdipos\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\laragon\www\sdipos\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\laragon\www\sdipos\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#11 C:\laragon\www\sdipos\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\laragon\www\sdipos\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+DEBUG - 2025-12-07 12:02:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-07 12:02:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-07 12:02:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-07 12:10:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-07 12:10:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-07 12:15:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
