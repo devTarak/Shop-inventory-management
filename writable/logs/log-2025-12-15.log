@@ -1,0 +1,616 @@
+DEBUG - 2025-12-15 00:02:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 00:03:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 00:03:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 00:03:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 00:11:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-15 00:11:47 --> mysqli_sql_exception: Table 'codeigniter_sdipos.investrators' doesn't exist in C:\laragon\www\sdipos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\sdipos\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\laragon\www\sdipos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\laragon\www\sdipos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\laragon\www\sdipos\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\laragon\www\sdipos\system\Model.php(676): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\laragon\www\sdipos\system\BaseModel.php(1287): CodeIgniter\Model->countAllResults(false)
+#6 C:\laragon\www\sdipos\app\Controllers\Admin\Investrator.php(18): CodeIgniter\BaseModel->paginate(10)
+#7 C:\laragon\www\sdipos\system\CodeIgniter.php(933): App\Controllers\Admin\Investrator->index()
+#8 C:\laragon\www\sdipos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Investrator))
+#9 C:\laragon\www\sdipos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\sdipos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\sdipos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\sdipos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-12-15 00:11:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'codeigniter_sdipos.investrators' doesn't exist
+[Method: GET, Route: admin/invesmant]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `investrators`', [], false)
+ 2 SYSTEMPATH\Model.php(676): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1287): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\Admin\Investrator.php(18): CodeIgniter\BaseModel->paginate(10)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Investrator->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Investrator))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-15 00:11:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'codeigniter_sdipos.investrators' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `investrators`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `investrators`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `investrators`', [], false)
+ 4 SYSTEMPATH\Model.php(676): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 5 SYSTEMPATH\BaseModel.php(1287): CodeIgniter\Model->countAllResults(false)
+ 6 APPPATH\Controllers\Admin\Investrator.php(18): CodeIgniter\BaseModel->paginate(10)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Investrator->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Investrator))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-15 00:11:47 --> [Caused by] mysqli_sql_exception: Table 'codeigniter_sdipos.investrators' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `investrators`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `investrators`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `investrators`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `investrators`', [], false)
+ 5 SYSTEMPATH\Model.php(676): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1287): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\Admin\Investrator.php(18): CodeIgniter\BaseModel->paginate(10)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Investrator->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Investrator))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-15 00:14:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-15 00:14:14 --> mysqli_sql_exception: Table 'codeigniter_sdipos.investrators' doesn't exist in C:\laragon\www\sdipos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\sdipos\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\laragon\www\sdipos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\laragon\www\sdipos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\laragon\www\sdipos\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\laragon\www\sdipos\system\Model.php(676): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\laragon\www\sdipos\system\BaseModel.php(1287): CodeIgniter\Model->countAllResults(false)
+#6 C:\laragon\www\sdipos\app\Controllers\Admin\Investrator.php(18): CodeIgniter\BaseModel->paginate(10)
+#7 C:\laragon\www\sdipos\system\CodeIgniter.php(933): App\Controllers\Admin\Investrator->index()
+#8 C:\laragon\www\sdipos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Investrator))
+#9 C:\laragon\www\sdipos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\sdipos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\sdipos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\sdipos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-12-15 00:14:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'codeigniter_sdipos.investrators' doesn't exist
+[Method: GET, Route: admin/invesmant]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `investrators`', [], false)
+ 2 SYSTEMPATH\Model.php(676): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1287): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\Admin\Investrator.php(18): CodeIgniter\BaseModel->paginate(10)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Investrator->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Investrator))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-15 00:14:14 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'codeigniter_sdipos.investrators' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `investrators`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `investrators`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `investrators`', [], false)
+ 4 SYSTEMPATH\Model.php(676): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 5 SYSTEMPATH\BaseModel.php(1287): CodeIgniter\Model->countAllResults(false)
+ 6 APPPATH\Controllers\Admin\Investrator.php(18): CodeIgniter\BaseModel->paginate(10)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Investrator->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Investrator))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-15 00:14:14 --> [Caused by] mysqli_sql_exception: Table 'codeigniter_sdipos.investrators' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `investrators`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `investrators`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `investrators`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `investrators`', [], false)
+ 5 SYSTEMPATH\Model.php(676): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1287): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\Admin\Investrator.php(18): CodeIgniter\BaseModel->paginate(10)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Investrator->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Investrator))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-15 00:17:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-15 00:17:54 --> TypeError: Unsupported operand types: string + int
+[Method: GET, Route: admin/invesmant]
+in APPPATH\Views\admin\investrator.php on line 23.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/investrator', [], true)
+ 4 APPPATH\Libraries\Template.php(29): view('admin/investrator', [...])
+ 5 APPPATH\Controllers\Admin\Investrator.php(24): App\Libraries\Template->admin_panel('investrator', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Investrator->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Investrator))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-15 00:20:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-15 00:29:56 --> mysqli_sql_exception: Failed to open the referenced table 'investators' in C:\laragon\www\sdipos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\sdipos\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `i...', 0)
+#1 C:\laragon\www\sdipos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `i...')
+#2 C:\laragon\www\sdipos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `i...')
+#3 C:\laragon\www\sdipos\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `i...')
+#4 C:\laragon\www\sdipos\app\Database\Migrations\2025-12-14-181538_Invesment.php(44): CodeIgniter\Database\Forge->createTable('investrators')
+#5 C:\laragon\www\sdipos\system\Database\MigrationRunner.php(876): App\Database\Migrations\Invesment->up()
+#6 C:\laragon\www\sdipos\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\laragon\www\sdipos\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\laragon\www\sdipos\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\laragon\www\sdipos\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\laragon\www\sdipos\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#11 C:\laragon\www\sdipos\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\laragon\www\sdipos\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-12-15 00:34:09 --> mysqli_sql_exception: Failed to open the referenced table 'investators' in C:\laragon\www\sdipos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\sdipos\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `i...', 0)
+#1 C:\laragon\www\sdipos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `i...')
+#2 C:\laragon\www\sdipos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `i...')
+#3 C:\laragon\www\sdipos\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `i...')
+#4 C:\laragon\www\sdipos\app\Database\Migrations\2025-12-14-181538_Invesment.php(44): CodeIgniter\Database\Forge->createTable('investrators')
+#5 C:\laragon\www\sdipos\system\Database\MigrationRunner.php(876): App\Database\Migrations\Invesment->up()
+#6 C:\laragon\www\sdipos\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\laragon\www\sdipos\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\laragon\www\sdipos\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\laragon\www\sdipos\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\laragon\www\sdipos\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#11 C:\laragon\www\sdipos\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\laragon\www\sdipos\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-12-15 00:36:06 --> mysqli_sql_exception: Referencing column 'investor_name' and referenced column 'id' in foreign key constraint 'investrators_investor_name_foreign' are incompatible. in C:\laragon\www\sdipos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\sdipos\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `i...', 0)
+#1 C:\laragon\www\sdipos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `i...')
+#2 C:\laragon\www\sdipos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `i...')
+#3 C:\laragon\www\sdipos\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `i...')
+#4 C:\laragon\www\sdipos\app\Database\Migrations\2025-12-14-181538_Invesment.php(44): CodeIgniter\Database\Forge->createTable('investrators')
+#5 C:\laragon\www\sdipos\system\Database\MigrationRunner.php(876): App\Database\Migrations\Invesment->up()
+#6 C:\laragon\www\sdipos\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\laragon\www\sdipos\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\laragon\www\sdipos\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\laragon\www\sdipos\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\laragon\www\sdipos\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#11 C:\laragon\www\sdipos\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\laragon\www\sdipos\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-12-15 00:37:23 --> mysqli_sql_exception: Failed to open the referenced table 'investators' in C:\laragon\www\sdipos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\sdipos\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `i...', 0)
+#1 C:\laragon\www\sdipos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `i...')
+#2 C:\laragon\www\sdipos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `i...')
+#3 C:\laragon\www\sdipos\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `i...')
+#4 C:\laragon\www\sdipos\app\Database\Migrations\2025-12-14-181538_Invesment.php(44): CodeIgniter\Database\Forge->createTable('investrators')
+#5 C:\laragon\www\sdipos\system\Database\MigrationRunner.php(876): App\Database\Migrations\Invesment->up()
+#6 C:\laragon\www\sdipos\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\laragon\www\sdipos\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\laragon\www\sdipos\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\laragon\www\sdipos\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\laragon\www\sdipos\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#11 C:\laragon\www\sdipos\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\laragon\www\sdipos\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-12-15 00:38:05 --> mysqli_sql_exception: Failed to open the referenced table 'investators' in C:\laragon\www\sdipos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\sdipos\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `i...', 0)
+#1 C:\laragon\www\sdipos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `i...')
+#2 C:\laragon\www\sdipos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `i...')
+#3 C:\laragon\www\sdipos\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `i...')
+#4 C:\laragon\www\sdipos\app\Database\Migrations\2025-12-14-181538_Invesment.php(44): CodeIgniter\Database\Forge->createTable('investrators')
+#5 C:\laragon\www\sdipos\system\Database\MigrationRunner.php(876): App\Database\Migrations\Invesment->up()
+#6 C:\laragon\www\sdipos\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\laragon\www\sdipos\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\laragon\www\sdipos\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\laragon\www\sdipos\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\laragon\www\sdipos\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#11 C:\laragon\www\sdipos\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\laragon\www\sdipos\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-12-15 00:38:51 --> mysqli_sql_exception: Referencing column 'investor_name' and referenced column 'id' in foreign key constraint 'investrators_investor_name_foreign' are incompatible. in C:\laragon\www\sdipos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\sdipos\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `i...', 0)
+#1 C:\laragon\www\sdipos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `i...')
+#2 C:\laragon\www\sdipos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `i...')
+#3 C:\laragon\www\sdipos\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `i...')
+#4 C:\laragon\www\sdipos\app\Database\Migrations\2025-12-14-181538_Invesment.php(44): CodeIgniter\Database\Forge->createTable('investrators')
+#5 C:\laragon\www\sdipos\system\Database\MigrationRunner.php(876): App\Database\Migrations\Invesment->up()
+#6 C:\laragon\www\sdipos\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\laragon\www\sdipos\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\laragon\www\sdipos\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\laragon\www\sdipos\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\laragon\www\sdipos\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#11 C:\laragon\www\sdipos\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\laragon\www\sdipos\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-12-15 00:40:52 --> mysqli_sql_exception: Referencing column 'investor_name' and referenced column 'id' in foreign key constraint 'investrators_investor_name_foreign' are incompatible. in C:\laragon\www\sdipos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\sdipos\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `i...', 0)
+#1 C:\laragon\www\sdipos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `i...')
+#2 C:\laragon\www\sdipos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `i...')
+#3 C:\laragon\www\sdipos\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `i...')
+#4 C:\laragon\www\sdipos\app\Database\Migrations\2025-12-14-181538_Invesment.php(44): CodeIgniter\Database\Forge->createTable('investrators')
+#5 C:\laragon\www\sdipos\system\Database\MigrationRunner.php(876): App\Database\Migrations\Invesment->up()
+#6 C:\laragon\www\sdipos\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\laragon\www\sdipos\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\laragon\www\sdipos\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\laragon\www\sdipos\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\laragon\www\sdipos\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#11 C:\laragon\www\sdipos\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\laragon\www\sdipos\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+DEBUG - 2025-12-15 00:58:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 01:11:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-15 01:11:08 --> mysqli_sql_exception: Unknown table 'investators_persons' in C:\laragon\www\sdipos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\sdipos\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `investa...', 0)
+#1 C:\laragon\www\sdipos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `investa...')
+#2 C:\laragon\www\sdipos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `investa...')
+#3 C:\laragon\www\sdipos\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `investa...', Array, false)
+#4 C:\laragon\www\sdipos\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\sdipos\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\sdipos\app\Models\InvestratorModel.php(15): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\sdipos\app\Controllers\Admin\Investrator.php(26): App\Models\InvestratorModel->getInvestorNames()
+#8 C:\laragon\www\sdipos\system\CodeIgniter.php(933): App\Controllers\Admin\Investrator->index()
+#9 C:\laragon\www\sdipos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Investrator))
+#10 C:\laragon\www\sdipos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\sdipos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\sdipos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\sdipos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-12-15 01:11:08 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'investators_persons'
+[Method: GET, Route: admin/invesmant]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `investators_persons`.*
+FROM `investrators`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\InvestratorModel.php(15): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Admin\Investrator.php(26): App\Models\InvestratorModel->getInvestorNames()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Investrator->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Investrator))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-15 01:11:08 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'investators_persons'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `investators_persons`.*
+FROM `investrators`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `investators_persons`.*
+FROM `investrators`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `investators_persons`.*
+FROM `investrators`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\InvestratorModel.php(15): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Admin\Investrator.php(26): App\Models\InvestratorModel->getInvestorNames()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Investrator->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Investrator))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-15 01:11:08 --> [Caused by] mysqli_sql_exception: Unknown table 'investators_persons'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `investators_persons`.*
+FROM `investrators`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `investators_persons`.*
+FROM `investrators`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `investators_persons`.*
+FROM `investrators`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `investators_persons`.*
+FROM `investrators`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\InvestratorModel.php(15): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Investrator.php(26): App\Models\InvestratorModel->getInvestorNames()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Investrator->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Investrator))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-15 01:17:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-15 01:17:33 --> mysqli_sql_exception: Unknown column 'investators_persons.name' in 'field list' in C:\laragon\www\sdipos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\sdipos\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `investr...', 0)
+#1 C:\laragon\www\sdipos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `investr...')
+#2 C:\laragon\www\sdipos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `investr...')
+#3 C:\laragon\www\sdipos\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `investr...', Array, false)
+#4 C:\laragon\www\sdipos\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\sdipos\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\sdipos\app\Models\InvestratorModel.php(21): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\sdipos\app\Controllers\Admin\Investrator.php(26): App\Models\InvestratorModel->getInvestorNames()
+#8 C:\laragon\www\sdipos\system\CodeIgniter.php(933): App\Controllers\Admin\Investrator->index()
+#9 C:\laragon\www\sdipos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Investrator))
+#10 C:\laragon\www\sdipos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\sdipos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\sdipos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\sdipos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-12-15 01:17:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'investators_persons.name' in 'field list'
+[Method: GET, Route: admin/invesmant]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `investrators`.*, `investators_persons`.`name`
+FROM `investrators`
+LEFT JOIN `investators_persons` ON `investators_persons`.`id` = `investrators`.`investor_name`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\InvestratorModel.php(21): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Admin\Investrator.php(26): App\Models\InvestratorModel->getInvestorNames()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Investrator->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Investrator))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-15 01:17:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'investators_persons.name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `investrators`.*, `investators_persons`.`name`
+FROM `investrators`
+LEFT JOIN `investators_persons` ON `investators_persons`.`id` = `investrators`.`investor_name`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `investrators`.*, `investators_persons`.`name`
+FROM `investrators`
+LEFT JOIN `investators_persons` ON `investators_persons`.`id` = `investrators`.`investor_name`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `investrators`.*, `investators_persons`.`name`
+FROM `investrators`
+LEFT JOIN `investators_persons` ON `investators_persons`.`id` = `investrators`.`investor_name`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\InvestratorModel.php(21): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Admin\Investrator.php(26): App\Models\InvestratorModel->getInvestorNames()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Investrator->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Investrator))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-15 01:17:33 --> [Caused by] mysqli_sql_exception: Unknown column 'investators_persons.name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `investrators`.*, `investators_persons`.`name`
+FROM `investrators`
+LEFT JOIN `investators_persons` ON `investators_persons`.`id` = `investrators`.`investor_name`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `investrators`.*, `investators_persons`.`name`
+FROM `investrators`
+LEFT JOIN `investators_persons` ON `investators_persons`.`id` = `investrators`.`investor_name`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `investrators`.*, `investators_persons`.`name`
+FROM `investrators`
+LEFT JOIN `investators_persons` ON `investators_persons`.`id` = `investrators`.`investor_name`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `investrators`.*, `investators_persons`.`name`
+FROM `investrators`
+LEFT JOIN `investators_persons` ON `investators_persons`.`id` = `investrators`.`investor_name`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\InvestratorModel.php(21): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Investrator.php(26): App\Models\InvestratorModel->getInvestorNames()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Investrator->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Investrator))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-15 01:19:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-15 01:19:21 --> mysqli_sql_exception: Unknown column 'investators_persons.name' in 'field list' in C:\laragon\www\sdipos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\sdipos\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `investr...', 0)
+#1 C:\laragon\www\sdipos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `investr...')
+#2 C:\laragon\www\sdipos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `investr...')
+#3 C:\laragon\www\sdipos\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `investr...', Array, false)
+#4 C:\laragon\www\sdipos\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\sdipos\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\sdipos\app\Models\InvestratorModel.php(21): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\sdipos\app\Controllers\Admin\Investrator.php(26): App\Models\InvestratorModel->getInvestorNames()
+#8 C:\laragon\www\sdipos\system\CodeIgniter.php(933): App\Controllers\Admin\Investrator->index()
+#9 C:\laragon\www\sdipos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Investrator))
+#10 C:\laragon\www\sdipos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\sdipos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\sdipos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\sdipos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-12-15 01:19:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'investators_persons.name' in 'field list'
+[Method: GET, Route: admin/invesmant]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `investrators`.*, `investators_persons`.`name`
+FROM `investrators`
+LEFT JOIN `investators_persons` ON `investators_persons`.`id` = `investrators`.`investor_id`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\InvestratorModel.php(21): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Admin\Investrator.php(26): App\Models\InvestratorModel->getInvestorNames()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Investrator->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Investrator))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-15 01:19:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'investators_persons.name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `investrators`.*, `investators_persons`.`name`
+FROM `investrators`
+LEFT JOIN `investators_persons` ON `investators_persons`.`id` = `investrators`.`investor_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `investrators`.*, `investators_persons`.`name`
+FROM `investrators`
+LEFT JOIN `investators_persons` ON `investators_persons`.`id` = `investrators`.`investor_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `investrators`.*, `investators_persons`.`name`
+FROM `investrators`
+LEFT JOIN `investators_persons` ON `investators_persons`.`id` = `investrators`.`investor_id`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\InvestratorModel.php(21): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Admin\Investrator.php(26): App\Models\InvestratorModel->getInvestorNames()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Investrator->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Investrator))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-12-15 01:19:21 --> [Caused by] mysqli_sql_exception: Unknown column 'investators_persons.name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `investrators`.*, `investators_persons`.`name`
+FROM `investrators`
+LEFT JOIN `investators_persons` ON `investators_persons`.`id` = `investrators`.`investor_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `investrators`.*, `investators_persons`.`name`
+FROM `investrators`
+LEFT JOIN `investators_persons` ON `investators_persons`.`id` = `investrators`.`investor_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `investrators`.*, `investators_persons`.`name`
+FROM `investrators`
+LEFT JOIN `investators_persons` ON `investators_persons`.`id` = `investrators`.`investor_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `investrators`.*, `investators_persons`.`name`
+FROM `investrators`
+LEFT JOIN `investators_persons` ON `investators_persons`.`id` = `investrators`.`investor_id`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\InvestratorModel.php(21): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Investrator.php(26): App\Models\InvestratorModel->getInvestorNames()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Investrator->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Investrator))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-15 01:20:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 01:22:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 01:26:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-15 01:26:25 --> ErrorException: Undefined array key "investor_name"
+[Method: GET, Route: admin/invesmant]
+in APPPATH\Views\admin\investrator.php on line 24.
+ 1 APPPATH\Views\admin\investrator.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "investor_name"', 'C:\\laragon\\www\\sdipos\\app\\Views\\admin\\investrator.php', 24)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\sdipos\\app\\Views\\admin\\investrator.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/investrator', [], true)
+ 5 APPPATH\Libraries\Template.php(29): view('admin/investrator', [...])
+ 6 APPPATH\Controllers\Admin\Investrator.php(26): App\Libraries\Template->admin_panel('investrator', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Investrator->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Investrator))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-15 01:26:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-15 01:26:55 --> ErrorException: Array to string conversion
+[Method: GET, Route: admin/invesmant]
+in APPPATH\Views\admin\investrator.php on line 24.
+ 1 APPPATH\Views\admin\investrator.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\laragon\\www\\sdipos\\app\\Views\\admin\\investrator.php', 24)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\sdipos\\app\\Views\\admin\\investrator.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/investrator', [], true)
+ 5 APPPATH\Libraries\Template.php(29): view('admin/investrator', [...])
+ 6 APPPATH\Controllers\Admin\Investrator.php(26): App\Libraries\Template->admin_panel('investrator', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Investrator->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Investrator))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-15 01:27:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-15 01:27:28 --> ErrorException: Undefined array key 1
+[Method: GET, Route: admin/invesmant]
+in APPPATH\Views\admin\investrator.php on line 24.
+ 1 APPPATH\Views\admin\investrator.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'C:\\laragon\\www\\sdipos\\app\\Views\\admin\\investrator.php', 24)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\sdipos\\app\\Views\\admin\\investrator.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/investrator', [], true)
+ 5 APPPATH\Libraries\Template.php(29): view('admin/investrator', [...])
+ 6 APPPATH\Controllers\Admin\Investrator.php(26): App\Libraries\Template->admin_panel('investrator', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Investrator->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Investrator))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-15 01:27:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-15 01:27:54 --> ErrorException: Cannot use [] for reading
+[Method: GET, Route: admin/invesmant]
+in APPPATH\Views\admin\investrator.php on line 24.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+DEBUG - 2025-12-15 01:28:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-15 01:28:08 --> ErrorException: Array to string conversion
+[Method: GET, Route: admin/invesmant]
+in APPPATH\Views\admin\investrator.php on line 24.
+ 1 APPPATH\Views\admin\investrator.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\laragon\\www\\sdipos\\app\\Views\\admin\\investrator.php', 24)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\sdipos\\app\\Views\\admin\\investrator.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/investrator', [], true)
+ 5 APPPATH\Libraries\Template.php(29): view('admin/investrator', [...])
+ 6 APPPATH\Controllers\Admin\Investrator.php(26): App\Libraries\Template->admin_panel('investrator', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Investrator->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Investrator))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-15 01:38:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 01:48:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 01:48:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 01:49:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 01:50:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 01:51:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 01:52:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 01:55:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 01:55:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-15 01:55:27 --> Error: Call to undefined function App\Controllers\Admin\getPost()
+[Method: POST, Route: admin/invesmant]
+in APPPATH\Controllers\Admin\Investrator.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Investrator->addInvesmentData()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Investrator))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-15 01:56:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-15 01:56:41 --> Error: Call to undefined function App\Controllers\Admin\getPost()
+[Method: POST, Route: admin/invesmant]
+in APPPATH\Controllers\Admin\Investrator.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Investrator->addInvesmentData()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Investrator))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-15 01:57:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-15 01:57:08 --> Error: Call to undefined function App\Controllers\Admin\getPost()
+[Method: POST, Route: admin/invesmant]
+in APPPATH\Controllers\Admin\Investrator.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Investrator->addInvesmentData()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Investrator))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-12-15 02:00:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 02:01:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 02:02:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 02:02:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 02:04:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 02:06:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 02:06:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 02:06:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 02:07:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 02:07:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-15 02:07:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

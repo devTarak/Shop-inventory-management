@@ -66,6 +66,14 @@ $currentSegment = $uri->getSegment(2);
                 reports
             </a>
         </li>
+        <li>
+            <a href="<?= base_url('admin/invesmant') ?>" class="nav-link text-white <?= ($currentSegment == 'invesmant') ? 'active' : '' ?>">
+                <img src="<?= base_url('include/admin_asset/svg/static.svg') ?>" alt="product add icon" width="20"
+                    height="20" class="me-2">
+                </svg>
+                Investrators
+            </a>
+        </li>
     </ul>
     <hr>
     <div class="dropdown">
