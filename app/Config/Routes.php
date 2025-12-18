@@ -16,9 +16,9 @@ $routes->group('admin', ["namespace" => "App\Controllers\Admin", "filter" => "au
     $routes->get('invoice/(:segment)', 'InvoiceController::viewInvoice/$1');
     $routes->get('expenses', 'ExpenseController::index');
     $routes->post('expenses/add', 'ExpenseController::addExpense');
+    $routes->post('expenses/search', 'ExpenseController::searchExpenses');
     $routes->get('invesmant','Investrator::index');
     $routes->post('invesmant','Investrator::addInvesmentData');
-
 });
 $routes->group('admin/products', ["namespace" => "App\Controllers\Admin", "filter"=>"auth"], function ($routes){
     $routes->get('/', 'Products::index');

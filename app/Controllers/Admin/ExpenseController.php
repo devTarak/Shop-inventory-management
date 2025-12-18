@@ -15,7 +15,7 @@ class ExpenseController extends BaseController
     }
     public function index()
     {
-        $expenses['expence_data'] = $this->expenseModel->orderBy('expense_date', 'DESC')->paginate(2);
+        $expenses['expence_data'] = $this->expenseModel->orderBy('expense_date', 'DESC')->paginate(20);
         $expenses['pager'] = $this->expenseModel->pager;
         return $this->template->admin_panel('expenseview', [
             'title' => 'Expenses',
@@ -49,5 +49,26 @@ class ExpenseController extends BaseController
         $this->expenseModel->insert($expenseData);
         return $this->response->setStatusCode(ResponseInterface::HTTP_CREATED)
                               ->setJSON(['message' => 'Expense added successfully']);
+    }
+    public function searchExpenses()
+    {
+        $startDate = $this->request->getPost('start_date');
+        $endDate = $this->request->getPost('end_date');
+
+        if (!$startDate || !$endDate) {
+            return $this->response
+                ->setStatusCode(422)
+                ->setJSON(['error' => 'Please provide both start and end dates.']);
+        }
+
+        $expenses = $this->expenseModel
+            ->where('expense_date >=', $startDate)
+            ->where('expense_date <=', $endDate)
+            ->orderBy('expense_date', 'DESC')
+            ->findAll();
+
+        return $this->response
+            ->setStatusCode(ResponseInterface::HTTP_OK)
+            ->setJSON($expenses);
     }
 }
